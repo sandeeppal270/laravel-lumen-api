@@ -22,3 +22,11 @@ $router->delete('/products/delete/{id}','ProductController@destroy');
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// this route is use for app key generator
+
+// $router->get('/key', function() {
+//     return \Illuminate\Support\Str::random(32);
+// });
+$router->get('/dbconnection','DatabaseController@checkDBConnection');
+
